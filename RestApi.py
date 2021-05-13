@@ -173,6 +173,14 @@ def gas():
    except Exception as e:
         print(e)
 
+@app.route('/serial')
+@as_json
+def serial():
+   try:
+        return  get_serial_number()
+   except Exception as e:
+        print(e)
+
 @app.route('/particulates')
 @as_json
 def patriculates():
